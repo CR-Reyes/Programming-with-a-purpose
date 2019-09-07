@@ -1,13 +1,21 @@
+/*
+    Clase Kary toma dos números enteros, el primero
+    es un número base 10 y el segundo es la base a la
+    cual se desea transformar ese número.
+ */
 public class Kary {
     public static void main(String[] args) {
         long i = Long.parseLong(args[0]);
         int k = Integer.parseInt(args[1]);
+        // calcular cuántos dígitos n tendrá la nueva cifra
         int n = 0;
         while (Math.pow(k, ++n) <= i) ;
-        long dig;
-        String letter = "#";
+        long dig; // dígito base k
+        String letter = "#"; // dígito base k cuando k > 10
         if (k > 10) {
             while (n > 0) {
+                // se necesitan n-1 divisiones p/ determinar
+                // los dígitos
                 dig = i / (long) Math.pow(k, --n);
                 i = i % (long) Math.pow(k, n);
                 if (dig > 9) {
