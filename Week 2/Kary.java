@@ -1,5 +1,5 @@
 /*
-    Clase Kary toma dos números enteros, el primero
+    La clase Kary toma dos números enteros, el primero
     es un número base 10 y el segundo es la base a la
     cual se desea transformar ese número.
  */
